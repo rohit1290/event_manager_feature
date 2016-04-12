@@ -1,6 +1,11 @@
 <?php
 
 return array(
+// transfer to Group
+	'event_manager:add_to_group:success' => "Event added to group calendar.",
+	'event_manager:add_to_group:add_group_title' => "Transfer this event to group",
+	'event_manager:add_to_group:add_group_button' => "Add to group",
+// End Transfer to group
 	'event_manager' => 'Event Manager',
 	'groups:enableevents' => 'Enable group events',
 	'event_manager:group' => 'Group events',

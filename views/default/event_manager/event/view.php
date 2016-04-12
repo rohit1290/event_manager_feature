@@ -1,5 +1,8 @@
 <?php
-
+/*
+Transfer to Group
+Added to line 159: $body .= elgg_view('event_manager/event/add_to_group', array('event' => $event));
+*/
 $event = $vars["entity"];
 $owner = $event->getOwnerEntity();
 $event_details = "";
@@ -151,6 +154,10 @@ if ($event->show_attendees || $event->canEdit()) {
 if ($event->with_program) {
 	$body .= elgg_view("event_manager/program/view", $vars);
 }
+
+// Allow transfer of event to group
+$body .= elgg_view('event_manager/event/add_to_group', array('event' => $event));
+
 
 if ($event->comments_on) {
 	$body .= elgg_view_comments($event);

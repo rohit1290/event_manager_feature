@@ -1,4 +1,8 @@
 <?php
+/*
+Transfer to Group
+Added line 91: elgg_register_action("event_manager/add_to_group",$base_dir . '/actions/group/add_to_group.php');
+*/
 
 define('EVENT_MANAGER_RELATION_ATTENDING', 'event_attending');
 define('EVENT_MANAGER_RELATION_ATTENDING_WAITINGLIST', 'event_waitinglist');
@@ -84,6 +88,8 @@ function event_manager_init() {
 	elgg_register_plugin_hook_handler('setting', 'plugin', 'event_manager_invalidate_cache');
 	
 	// actions
+	elgg_register_action("event_manager/add_to_group",$base_dir . '/actions/group/add_to_group.php');
+	
 	elgg_register_action('event_manager/event/edit', $base_dir . '/actions/event/edit.php');
 	elgg_register_action('event_manager/event/delete', $base_dir . '/actions/event/delete.php');
 	elgg_register_action('event_manager/event/rsvp', $base_dir . '/actions/event/rsvp.php');
